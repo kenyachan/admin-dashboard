@@ -8,6 +8,7 @@
     --primary-color: rgb(25, 146, 212);
     --accent-color: rgb(240, 180, 41);
     --accent-color2: rgb(226, 232, 240);
+    --shadow-color: rgb(203, 207, 214);
 
     font-family: 'Roboto';
     font-size: 18px;
@@ -20,7 +21,63 @@ body {
 
 header {
     grid-column: 2 / 3;
+    box-shadow: 0px 5px 5px 0 var(--shadow-color);
+    position: relative;
 }
+
+#header-top {
+    padding: 1rem 2rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+#header-top button {
+    appearance: none;
+    background-color: #fff;
+    border: none;
+    display: grid;
+    align-items: center;
+}
+
+#header-top button img {
+    height: 1.5rem;
+}
+
+.search {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: center;
+}
+
+.account {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: end;
+    gap: 2rem;
+}
+
+.account > img {
+    height: 3rem;
+    background-color: var(--accent-color2);
+    border-radius: 3rem;
+    padding: 5px;
+}
+
+
+.search input {
+    appearance: none;
+    background-color: var(--accent-color2);
+    height: 1.8rem;
+    border: none;
+    border-radius: 20px;
+}
+
+/* main {
+    background-color: var(--accent-color2);
+} */
 
 .sidebar {
     grid-row: 1 / 3;
