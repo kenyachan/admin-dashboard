@@ -1,0 +1,24 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary-color: rgb(25, 126, 212);
+    --accent-color: rgb(240, 180, 41);
+    --accent-color2: rgb(226, 232, 240);
+}
+
+body {
+    display: grid;
+    grid-template: 1fr, 3fr;
+}
+
+header {
+    grid-column: 2 / 3;
+}
+
+nav {
+    grid-row: 1 / 3;
+}
+
