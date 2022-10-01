@@ -10,25 +10,32 @@
     --accent-color2: rgb(226, 232, 240);
     --shadow-color: rgb(203, 207, 214);
 
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
 }
 
 body {
     display: grid;
-    grid-template: 1fr 6fr / 1fr 4fr ;
+    grid-template: auto 1fr / 1fr 4fr ;
 }
 
 header {
     grid-column: 2 / 3;
     box-shadow: 0px 5px 5px 0 var(--shadow-color);
     position: relative;
+    padding: 1rem 2rem;
 }
 
-#header-top {
-    padding: 1rem 2rem;
+#header-top{
     display: grid;
     grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+#header-bottom {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     gap: 2rem;
 }
 
@@ -43,14 +50,16 @@ header {
     padding: 5px
 }
 
-.interactive-component:hover {
+header button:hover,
+#header-top button:hover,
+header input:hover {
     outline: 1px solid var(--accent-color);
 }
 
-.interactive-component:active:focus {
+header input:focus,
+header button:active {
     outline: 2px solid var(--accent-color);
 }
-
 
 #header-top button img {
     height: 1.5rem;
@@ -68,16 +77,19 @@ header {
     grid-template-columns: auto auto auto;
     align-items: center;
     justify-content: end;
-    gap: 2rem;
+    gap: 1.3rem;
 }
 
-.account > img {
-    height: 3rem;
+.user-photo {
+    height: 4rem;
     background-color: var(--accent-color2);
-    border-radius: 3rem;
+    border-radius: 50%;
     padding: 5px;
 }
 
+.account > .user-photo {
+    height: 3rem;
+}
 
 .search input {
     appearance: none;
@@ -90,6 +102,46 @@ header {
     font-size: 1rem;
 }
 
+.user-details {
+    display: grid;
+    justify-content: start;
+    align-content: center;
+    gap: 0.3rem;;
+}
+
+.user-details>.greeting {
+    font-size: 0.8rem;
+}
+
+.user {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.action-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-content: center;
+    justify-items: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+.action-buttons li {
+    width: 100%;
+}
+
+.action-buttons button {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 1.5rem;
+    padding: 0.6rem 1.3rem;
+    width: 100%;
+
+    color: #fff;
+}
+
 /* main {
     background-color: var(--accent-color2);
 } */
@@ -100,7 +152,7 @@ header {
     min-height: 100vh;
     background-color: var(--primary-color);
     color: #fff;
-    font-weight: bolder;
+    font-weight: 500;
 }
 
 .sidebar-items {
