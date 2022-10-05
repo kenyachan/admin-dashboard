@@ -14,32 +14,11 @@
     font-size: 18px;
 }
 
-body {
-    display: grid;
-    grid-template: auto 1fr / 1fr 4fr ;
-}
+/* | Components */
 
-header {
-    grid-column: 2 / 3;
-    box-shadow: 0px 5px 5px 0 var(--shadow-color);
-    position: relative;
-    padding: 1rem 2rem;
-}
+/* || Icon Button */
 
-#header-top{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
-}
-
-#header-bottom {
-    margin-top: 1rem;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    gap: 2rem;
-}
-
-#header-top button {
+.icon-button {
     display: grid;
     align-items: center;
     appearance: none;
@@ -47,49 +26,15 @@ header {
     border: none;
     outline: 1px solid rgb(230, 230, 230);
     border-radius: 50%;
-    padding: 5px
+    padding: 5px;
 }
 
-main button {
-    display: grid;
-    align-items: center;
-    appearance: none;
-    background-color: #fff;
-    border: none;
-    outline: 1px solid rgb(230, 230, 230);
-    border-radius: 50%;
-    padding: 5px
+.icon-button > img {
+    height: 1.5rem;
 }
 
-header button:hover,
-#header-top button:hover,
-header input:hover {
-    outline: 1px solid var(--accent-color);
-}
 
-header input:focus,
-header button:active {
-    outline: 2px solid var(--accent-color);
-}
-
-#header-bottom>.user-photo {
-    height: 3.5rem;
-}
-
-.search {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 1rem;
-    align-items: center;
-}
-
-.account {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    align-items: center;
-    justify-content: end;
-    gap: 1.3rem;
-}
+/* || User Photo */
 
 .user-photo {
     height: 2.5rem;
@@ -98,7 +43,61 @@ header button:active {
     padding: 5px;
 }
 
-.search input {
+
+/* || Icon Button - Interaction */
+
+.icon-button:hover {
+    outline: 1px solid var(--accent-color);
+}
+
+.icon-button:active {
+    outline: 2px solid var(--accent-color);
+}
+
+
+/* || Text Button */
+
+.text-button {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 1.5rem;
+    padding: 0.6rem 1.3rem;
+    width: 100%;
+
+    color: #fff;
+}
+
+
+/* || Header Text Button Layout */
+
+header .text-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-content: center;
+    justify-items: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+header .text-buttons li {
+    width: 100%;
+}
+
+header .text-button:active {
+    outline: 2px solid var(--accent-color);
+}
+
+
+/* || Search Widget - Presentation */
+
+.search-widget {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: center;
+}
+
+.search-widget input {
     appearance: none;
     background-color: var(--accent-color2);
     outline: 1px solid var(--accent-color2);
@@ -109,69 +108,60 @@ header button:active {
     font-size: 1rem;
 }
 
-.user-details {
+
+/* || Search Widget - Interaction */
+
+.search-widget input:hover {
+    outline: 1px solid var(--accent-color);
+}
+
+.search-widget input:focus {
+    outline: 2px solid var(--accent-color);
+}
+
+
+/* || Account Widget - Presentation */
+
+.account-widget {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: end;
+    gap: 1.3rem;
+}
+
+
+/* || User Widget - Presentation */
+
+.user-widget {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+}
+
+.user-widget .user-photo {
+    height: 3.5rem;
+}
+
+.user-widget-text {
     display: grid;
     justify-content: start;
     align-content: center;
     gap: 0.3rem;;
 }
 
-.user-details>.greeting {
+.user-widget-text > .greeting {
     font-size: 0.8rem;
 }
 
-.user {
+.user-widget .user {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
 }
 
-.action-buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-content: center;
-    justify-items: center;
-    list-style: none;
-    gap: 2rem;
-}
 
-.action-buttons li {
-    width: 100%;
-}
-
-.action-buttons button {
-    background-color: var(--primary-color);
-    border: none;
-    border-radius: 1.5rem;
-    padding: 0.6rem 1.3rem;
-    width: 100%;
-
-    color: #fff;
-}
-
-main {
-    background-color: var(--accent-color2);
-}
-
-.sidebar {
-    grid-row: 1 / 3;
-    padding: 1rem;
-    min-height: 100vh;
-    background-color: var(--primary-color);
-    color: #fff;
-    font-weight: 500;
-}
-
-.sidebar-items {
-    display: grid;
-    grid-template-rows: auto, auto, auto;
-    gap: 3rem;
-}
-
-.sidebar ul {
-    display: grid;
-    gap: 1rem;
-}
+/* || Logo Widget */
 
 .logo {
     display: grid;
@@ -190,6 +180,22 @@ main {
     align-items: center;
 }
 
+
+/* || Sidebar - Presentation */
+
+.sidebar {
+    padding: 1rem;
+    min-height: 100vh;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: 500;
+}
+
+.sidebar ul {
+    display: grid;
+    gap: 1rem;
+}
+
 .sidebar li {
     list-style: none;
     display: grid;
@@ -203,9 +209,13 @@ main {
     height: 1.5rem;
 }
 
-main > section > h1 {
+
+
+
+.section-heading {
     font-size: 1.3rem;
     font-weight: 400;
+    margin-top: 1rem;
 }
 
 #announcements h1 {
@@ -220,6 +230,7 @@ main > section > h1 {
 .card {
     background-color: #fff;
     border-radius: 10px;
+    box-shadow: 0 3px 3px 3px var(--shadow-color);
     padding: 1rem;
 }
 
@@ -227,6 +238,26 @@ main > section > h1 {
     font-size: 1rem;
 }
 
-.icon-button > img {
-    height: 1.5rem;
+.project {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+
+.card-actions {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: end;
+    gap: 0.8rem;
+}
+
+.card.project {
+    border-left: 10px solid var(--accent-color);
+}
+
+/* Main Content - Presentation */
+
+main {
+    background-color: var(--accent-color2);
+    padding: 1rem;
 }

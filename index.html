@@ -7,42 +7,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin-Dashboard</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900">
 </head>
 
 <body>
     <header>
-        <div id="header-top">
-            <div class="search">
+        <section id="header-top">
+            <div class="search-widget">
                 <button class="icon-button">
                     <img src="./img/magnify.svg" alt="search">
                 </button>
                 <input type="search">
             </div>
-            <div class="account">
+            <div class="account-widget">
                 <button class="icon-button">
                     <img src="./img/bell-ring-outline.svg" alt="notifications">
                 </button>
                 <img class="user-photo" src="./img/account.svg" alt="profile icon">
                 <p class="name">Morgan Oakley</p>
             </div>
-        </div>
-        <div id="header-bottom">
-            <img class="user-photo" src="./img/account.svg" alt="profile icon">
-            <div class="user-details">
-                <p class="greeting">Hi there,</p>
-                <div class="user">
-                    <p class="name">Morgan Oakley</p>
-                    <p class="user-name">(@morgan)</p>
+        </section>
+        <section id="header-bottom">
+            <div class="user-widget">
+                <img class="user-photo" src="./img/account.svg" alt="profile icon">
+
+                <div class="user-widget-text">
+                    <p class="greeting">Hi there,</p>
+                    <div class="user">
+                        <p class="name">Morgan Oakley</p>
+                        <p class="user-name">(@morgan)</p>
+                    </div>
                 </div>
             </div>
-            <ul class="action-buttons">
-                <li><button class="action-button">New</button></li>
-                <li><button class="action-button">Upload</button></li>
-                <li><button class="action-button">Share</button></li>
+
+
+            <ul class="text-buttons">
+                <li><button class="text-button">New</button></li>
+                <li><button class="text-button">Upload</button></li>
+                <li><button class="text-button">Share</button></li>
             </ul>
-        </div>
+        </section>
     </header>
     <div class="sidebar">
         <div class="sidebar-items">
@@ -85,8 +91,8 @@
     </div>
     <main>
         <section id="misc-content">
-            <h1>Announcements</h1>
-            <div id="announcements" class="card">
+            <h1 class="section-heading">Announcements</h1>
+            <section id="announcements" class="card">
                 <article class="announcement">
                     <h1>Site Maintenance</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -102,9 +108,9 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua....</p>
                 </article>
-            </div>
-            <h1>Trending</h1>
-            <div id="trending" class="card">
+            </section>
+            <h1 class="section-heading">Trending</h1>
+            <section id="trending" class="card">
                 <div>
                     <img class="user-photo" src="/img/account.svg" alt="profile image">
                     <p>@tegan</p>
@@ -125,100 +131,108 @@
                     <p>@alex</p>
                     <p>No Traffic Maker</p>
                 </div>
-            </div>
+            </section>
         </section>
         <section id="projects">
-            <h1>Your Projects</h1>
-            <div class="card project">
-                <h1>Super Cool Project</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua....</p>
-                <div class="card-actions">
-                    <button class="icon-button">
-                        <img src="./img/star-plus-outline.svg" alt="favourite">
-                    </button class="icon-button">
-                    <button class="icon-button">
-                        <img src="./img/eye-plus-outline.svg" alt="watch">
-                    </button>
-                    <button class="icon-button">
-                        <img src="./img/source-fork.svg" alt="fork">
-                    </button>
+            <h1 class="section-heading">Your Projects</h1>
+            <section id="project-cards">
+                <div class="card project">
+                    <h1>Super Cool Project</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua....</p>
+                    <div class="card-actions">
+                        <button class="icon-button">
+                            <img src="./img/star-plus-outline.svg" alt="favourite">
+                        </button class="icon-button">
+                        <button class="icon-button">
+                            <img src="./img/eye-plus-outline.svg" alt="watch">
+                        </button>
+                        <button class="icon-button">
+                            <img src="./img/source-fork.svg" alt="fork">
+                        </button>
+                    </div>
                 </div>
-            </div>
-            <div class="card project">
-                <h1>Less Cool Project</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua....</p>
-                <div class="card-actions">
-                    <button class="icon-button">
-                        <img src="./img/star-plus-outline.svg" alt="favourite">
-                    </button class="icon-button">
-                    <button class="icon-button">
-                        <img src="./img/eye-plus-outline.svg" alt="watch">
-                    </button>
-                    <button class="icon-button">
-                        <img src="./img/source-fork.svg" alt="fork">
-                    </button>
+                <div class="card project">
+                    <h1>Less Cool Project</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua....</p>
+                    <div class="card-actions">
+                        <button class="icon-button">
+                            <img src="./img/star-plus-outline.svg" alt="favourite">
+                        </button class="icon-button">
+                        <button class="icon-button">
+                            <img src="./img/eye-plus-outline.svg" alt="watch">
+                        </button>
+                        <button class="icon-button">
+                            <img src="./img/source-fork.svg" alt="fork">
+                        </button>
+                    </div>
                 </div>
-            </div>
-            <div class="card project">
-                <h1>Impossible App</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua....</p>
-                <div class="card-actions">
-                    <button class="icon-button">
-                        <img src="./img/star-plus-outline.svg" alt="favourite">
-                    </button class="icon-button">
-                    <button class="icon-button">
-                        <img src="./img/eye-plus-outline.svg" alt="watch">
-                    </button>
-                    <button class="icon-button">
-                        <img src="./img/source-fork.svg" alt="fork">
-                    </button>
+                <div class="card project">
+                    <h1>Impossible App</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua....</p>
+                    <div class="card-actions">
+                        <button class="icon-button">
+                            <img src="./img/star-plus-outline.svg" alt="favourite">
+                        </button class="icon-button">
+                        <button class="icon-button">
+                            <img src="./img/eye-plus-outline.svg" alt="watch">
+                        </button>
+                        <button class="icon-button">
+                            <img src="./img/source-fork.svg" alt="fork">
+                        </button>
+                    </div>
                 </div>
-            </div>
-            <div class="card project">
-                <h1>Easy Peasy App</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua....</p>
-                <div class="card-actions">
-                    <button class="icon-button">
-                        <img src="./img/star-plus-outline.svg" alt="favourite">
-                    </button class="icon-button">
-                    <button class="icon-button">
-                        <img src="./img/eye-plus-outline.svg" alt="watch">
-                    </button>
-                    <button class="icon-button">
-                        <img src="./img/source-fork.svg" alt="fork">
-                    </button>
+                <div class="card project">
+                    <h1>Easy Peasy App</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua....</p>
+                    <div class="card-actions">
+                        <button class="icon-button">
+                            <img src="./img/star-plus-outline.svg" alt="favourite">
+                        </button class="icon-button">
+                        <button class="icon-button">
+                            <img src="./img/eye-plus-outline.svg" alt="watch">
+                        </button>
+                        <button class="icon-button">
+                            <img src="./img/source-fork.svg" alt="fork">
+                        </button>
+                    </div>
                 </div>
-            </div>
-            <div class="card project">
-                <h1>Ad Blocker</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua....</p>
-                <div class="card-actions">
-                    <button class="icon-button">
-                        <img src="./img/star-plus-outline.svg" alt="favourite">
-                    </button class="icon-button">
-                    <button class="icon-button">
-                        <img src="./img/eye-plus-outline.svg" alt="watch">
-                    </button>
-                    <button class="icon-button">
-                        <img src="./img/source-fork.svg" alt="fork">
-                    </button>
+                <div class="card project">
+                    <h1>Ad Blocker</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua....</p>
+                    <div class="card-actions">
+                        <button class="icon-button">
+                            <img src="./img/star-plus-outline.svg" alt="favourite">
+                        </button class="icon-button">
+                        <button class="icon-button">
+                            <img src="./img/eye-plus-outline.svg" alt="watch">
+                        </button>
+                        <button class="icon-button">
+                            <img src="./img/source-fork.svg" alt="fork">
+                        </button>
+                    </div>
                 </div>
-            </div>
-            <div class="card project">
-                <h1>Money Maker</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua....</p>
-                <div class="card-actions">
-                    <button class="icon-button">
-                        <img src="./img/star-plus-outline.svg" alt="favourite">
-                    </button class="icon-button">
-                    <button class="icon-button">
-                        <img src="./img/eye-plus-outline.svg" alt="watch">
-                    </button>
-                    <button class="icon-button">
-                        <img src="./img/source-fork.svg" alt="fork">
-                    </button>
+                <div class="card project">
+                    <h1>Money Maker</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua....</p>
+                    <div class="card-actions">
+                        <button class="icon-button">
+                            <img src="./img/star-plus-outline.svg" alt="favourite">
+                        </button class="icon-button">
+                        <button class="icon-button">
+                            <img src="./img/eye-plus-outline.svg" alt="watch">
+                        </button>
+                        <button class="icon-button">
+                            <img src="./img/source-fork.svg" alt="fork">
+                        </button>
+                    </div>
                 </div>
-            </div>
+            </section>
         </section>
     </main>
 </body>

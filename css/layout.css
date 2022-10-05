@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* || General Site Layout */
+
+body {
+    display: grid;
+    grid-template: auto 1fr / 1fr 4fr ;
+}
+
+header {
+    grid-column: 2 / 3;
+    position: relative;
+}
+
+.sidebar {
+    grid-row: 1 / 3;
+}
+
+header {
+    box-shadow: 0px 5px 5px 0 var(--shadow-color);
+    padding: 1rem 2rem;
+}
+
+/* || Header layout */
+
+#header-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+#header-bottom {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+}
+
+/* || Sidebar layout */
+
+.sidebar-items {
+    display: grid;
+    gap: 3rem;
+}
+
+/* || Main content layout */
+
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1rem;
+}
+
+#projects {
+    grid-column: 1 / 2;
+    grid-row: 1 / 1;
+
+    display: grid;
+    gap: 1rem;
+}
+
+#misc-content {
+    grid-column: 2 / 3;
+
+    display: grid;
+    gap: 1rem;
+    align-content: start;
+}
+
+/* || Projects Layout */
+
+#projects {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+#project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(clamp(250px, 30%, 350px), 1fr)); 
+    gap: 1rem;
+}
