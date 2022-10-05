@@ -218,14 +218,30 @@ header .text-button:active {
     margin: 1rem 0;
 }
 
-#announcements h1 {
-    font-size: 0.8rem;;
-    font-weight: 700;
+.section-content {
+    font-size: 0.8rem;
+    font-weight: 300;
 }
 
-#announcements {
-    font-size: 0.8rem;
+/* this isn't doing anything? */
+.announcement h1 {
+    font-size: 0.8rem;;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
 }
+
+.announcement {
+    padding: 1rem 0.5rem;
+    border-bottom: 1px solid var(--shadow-color);
+}
+
+.announcement:last-child {
+    border-bottom: none;
+}
+
+
+
+
 
 .card {
     background-color: #fff;
@@ -253,7 +269,7 @@ header .text-button:active {
 
 .card.project {
     border-left: 10px solid var(--accent-color);
-    font-weight: lighter;
+    font-weight: 300;
     display: grid;
     gap: 0.7rem;
     height: 100%;
