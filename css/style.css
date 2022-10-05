@@ -239,10 +239,6 @@ header .text-button:active {
     border-bottom: none;
 }
 
-
-
-
-
 .card {
     background-color: #fff;
     border-radius: 10px;
@@ -284,4 +280,21 @@ header .text-button:active {
 main {
     background-color: var(--accent-color2);
     padding: 1rem;
+}
+
+
+/* || Trending User Widget */
+
+.trending-user-widget {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    align-items: center;
+}
+
+.trending-user-widget p:last-child {
+    font-weight: 300;
+
 }
