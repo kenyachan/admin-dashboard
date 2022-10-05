@@ -230,7 +230,7 @@ header .text-button:active {
 .card {
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 3px 3px 3px var(--shadow-color);
+    box-shadow: 0 1px 5px 2px var(--shadow-color);
     padding: 1rem;
 }
 
@@ -253,6 +253,14 @@ header .text-button:active {
 
 .card.project {
     border-left: 10px solid var(--accent-color);
+    font-weight: lighter;
+    display: grid;
+    gap: 0.7rem;
+    height: 100%;
+}
+
+.card.project > .card-actions {
+    margin-top: 1rem;
 }
 
 /* Main Content - Presentation */

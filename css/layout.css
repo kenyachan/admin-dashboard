@@ -80,6 +80,8 @@ main {
 
 #project-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(clamp(250px, 30%, 350px), 1fr)); 
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(clamp(250px, 30%, 350px), 1fr));
+    grid-auto-rows: max-content;
+    gap: 1.5rem;
+    align-items: flex-start;
 }
