@@ -58,9 +58,6 @@ main {
 #projects {
     grid-column: 1 / 2;
     grid-row: 1 / 1;
-
-    display: grid;
-    gap: 1rem;
 }
 
 #misc-content {

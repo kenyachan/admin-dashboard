@@ -215,7 +215,7 @@ header .text-button:active {
 .section-heading {
     font-size: 1.3rem;
     font-weight: 400;
-    margin-top: 1rem;
+    margin: 1rem 0;
 }
 
 #announcements h1 {
